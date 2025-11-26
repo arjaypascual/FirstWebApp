@@ -2,31 +2,71 @@ const express = require("express");
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// allow JSON body
-app.use(express.json());
-
-// Home page
+// Home route (HTML Output)
 app.get("/", (req, res) => {
-  res.send("Quotes API Online!");
+  const name = "John Ansel C. Doton";
+  const section = "BSIT NT 4101";
+  const quote = "The secret of the future is hidden in your daily routine.";
+
+  const html = `
+  <html>
+  <head>
+    <title>Motivational Card</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #2c2c2c, #1a1a1a);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        color: white;
+      }
+      .card {
+        background: #333;
+        padding: 40px;
+        width: 600px;
+        text-align: center;
+        border-radius: 20px;
+        box-shadow: 0 0 40px rgba(0,0,0,0.6);
+        animation: fadeIn 1s ease;
+      }
+      h1 {
+        font-size: 36px;
+        margin-bottom: 10px;
+      }
+      h2 {
+        font-size: 22px;
+        margin-bottom: 25px;
+        font-weight: normal;
+        opacity: 0.8;
+      }
+      p {
+        font-size: 20px;
+        font-style: italic;
+        opacity: 0.9;
+      }
+      @keyframes fadeIn {
+        from { opacity: 0; transform: scale(0.95); }
+        to { opacity: 1; transform: scale(1); }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h1>${name}</h1>
+      <h2>${section}</h2>
+      <p>"${quote}"</p>
+    </div>
+  </body>
+  </html>
+  `;
+
+  res.send(html);
 });
 
-// POST insert (name, section, quotation)
-app.post("/addQuote", (req, res) => {
-  const { name, section, quotation } = req.body;
-
-  if (!name || !section || !quotation) {
-    return res.status(400).json({
-      error: "name, section, and quotation are required."
-    });
-  }
-
-  res.json({
-    message: "Quote received!",
-    data: { name, section, quotation }
-  });
-});
-
-// Start server
+// Server start
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
