@@ -14,7 +14,7 @@ app.get("/", (req, res) => {
     <title>My Node App </title>
     <style>
       body {
-        font-family: Arial, script;
+        font-family: script;
         background:linear-gradient(135deg, #56ab2f, #a8e063);
         display: flex;
         justify-content: center;
