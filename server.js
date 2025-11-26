@@ -3,8 +3,6 @@ const PORT = process.env.PORT || 3000;
 
 const server = http.createServer((req, res) => {
   res.write("Hello Cloud!!!");
-  res.write("Welcome to my page.");
-  res.write("Welcome to my page.");
   res.end();
 });
 
