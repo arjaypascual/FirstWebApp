@@ -11,11 +11,11 @@ app.get("/", (req, res) => {
   const html = `
   <html>
   <head>
-    <title>My Node App</title>
+    <title>My Node App </title>
     <style>
       body {
         font-family: Arial, sans-serif;
-        background: linear-gradient(135deg, #7B2CBF, #1a1a1a);
+        background: linear-gradient(135deg, #667eea, #764ba2);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -24,7 +24,7 @@ app.get("/", (req, res) => {
         color: white;
       }
       .card {
-        background: #FFDAB9;
+        background: #FFB6C1;
         padding: 40px;
         width: 600px;
         text-align: center;
@@ -33,6 +33,7 @@ app.get("/", (req, res) => {
         animation: fadeIn 1s ease;
       }
       h1 {
+      text-color: #FFB6C1;
         font-size: 36px;
         margin-bottom: 10px;
       }
