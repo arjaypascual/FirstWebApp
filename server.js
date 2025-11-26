@@ -15,7 +15,13 @@ app.get("/", (req, res) => {
     <style>
       body {
         font-family: Arial, sans-serif;
-        background: linear-gradient(135deg, #7B2CBF, #1a1a1a);
+        
+        /* PNG background here */
+        background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20220911/pngtree-soft-blur-peach-pink-abstract-background-image_1463447.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
         display: flex;
         justify-content: center;
         align-items: center;
@@ -23,15 +29,18 @@ app.get("/", (req, res) => {
         margin: 0;
         color: white;
       }
+
       .card {
-        background: #FF47C7;
+        background: rgba(255, 170, 180, 0.35); /* peach-pink transparent */
         padding: 40px;
         width: 600px;
         text-align: center;
         border-radius: 20px;
-        box-shadow: 0 0 40px rgba(0,0,0,0.6);
+        box-shadow: 0 0 40px rgba(0,0,0,0.4);
+        backdrop-filter: blur(8px);
         animation: fadeIn 1s ease;
       }
+
       h1 {
         font-size: 36px;
         margin-bottom: 10px;
