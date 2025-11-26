@@ -24,7 +24,7 @@ app.get("/", (req, res) => {
         color: white;
       }
       .card {
-        background: #064635;
+        background: #1B5E20;
         padding: 40px;
         width: 600px;
         text-align: center;
