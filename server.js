@@ -4,9 +4,9 @@ const PORT = process.env.PORT || 3000;
 
 // Home route (HTML Output)
 app.get("/", (req, res) => {
-  const name = "John Ansel C. Doton";
+  const name = "Rolly Jr S. Pascual";
   const section = "BSIT NT 4101";
-  const quote = "The secret of the future is hidden in your daily routine.";
+  const quote = "Today is your opportunity to build the tomorrow you want.";
 
   const html = `
   <html>
@@ -15,7 +15,7 @@ app.get("/", (req, res) => {
     <style>
       body {
         font-family: Arial, sans-serif;
-        background: linear-gradient(135deg, #2c2c2c, #1a1a1a);
+        background: linear-gradient(135deg, #2c2c2cff, #1a1a1a);
         display: flex;
         justify-content: center;
         align-items: center;
