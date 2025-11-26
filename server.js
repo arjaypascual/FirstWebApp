@@ -11,7 +11,7 @@ app.get("/", (req, res) => {
   const html = `
   <html>
   <head>
-    <title>Motivational Card</title>
+    <title>My Node App</title>
     <style>
       body {
         font-family: Arial, sans-serif;
@@ -24,7 +24,7 @@ app.get("/", (req, res) => {
         color: white;
       }
       .card {
-        background: #333;
+        background: #FF47C7;
         padding: 40px;
         width: 600px;
         text-align: center;
