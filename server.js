@@ -15,7 +15,7 @@ app.get("/", (req, res) => {
     <style>
       body {
         font-family: Arial, sans-serif;
-        background: linear-gradient(135deg, #667eea, #764ba2);
+        background: background: linear-gradient(135deg, #56ab2f, #a8e063);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -24,7 +24,8 @@ app.get("/", (req, res) => {
         color: white;
       }
       .card {
-        background: #FFB6C1;
+        background: #A8D5BA;
+        text-color: #064635;
         padding: 40px;
         width: 600px;
         text-align: center;
@@ -33,7 +34,6 @@ app.get("/", (req, res) => {
         animation: fadeIn 1s ease;
       }
       h1 {
-      text-color: #FFB6C1;
         font-size: 36px;
         margin-bottom: 10px;
       }
